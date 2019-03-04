@@ -2,7 +2,7 @@ module.exports = {
 	NODE_ENV: 'development',
 	development: {
 		serveroptions: {
-			port: 3000,
+			port: 5000,
 			host: 'localhost',
 			playground: true,
 		},
@@ -10,7 +10,7 @@ module.exports = {
 	production: {
 		serveroptions: {
 			port: 3000,
-			host: '',
+			host: '0.0.0.0',
 			playground: false,
 		},
 	},	
