@@ -1,0 +1,18 @@
+{
+  "name": "BibleAPI",
+  "version": "1.0.0",
+  "description": "A simple Bible API using graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/test/index.js",
+    "start": "node index.js",
+    "generate": "node utils/generate.js"
+  },
+  "author": "isrmic",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.4"
+  }
+}

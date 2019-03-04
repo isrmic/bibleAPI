@@ -1,0 +1,35 @@
+#query example
+type Query {
+    books(bookname: String, chapter: Int, versicle: Int, content: String): [Book!]!
+    randomversicle: RandVerse!
+}
+
+type Book {
+    bookname: String!
+    abbrev: String!
+    author: String!
+    testament: String!
+    group: String!
+    chaptersnumber: Int!
+    chapters: [Chapter!]!
+}
+
+type Chapter {
+    chapternumber: Int!
+    versiclesnumber: Int!
+    versicles: [Versicle!]!
+    content: String!
+}
+
+type Versicle {
+
+    versiclenumber: Int!    
+    content: String!
+}
+
+type RandVerse {
+    bookname: String!
+    chapternumber: Int!
+    versiclenumber: Int!
+    content: String!
+}
