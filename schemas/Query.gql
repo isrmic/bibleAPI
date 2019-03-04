@@ -1,7 +1,7 @@
 #query example
 type Query {
     books(bookname: String, chapter: Int, versicle: Int, content: String): [Book!]!
-    randomversicle: RandVerse!
+    randomversicle (bookname: String, chapter: Int): RandVerse!
 }
 
 type Book {
@@ -17,12 +17,10 @@ type Book {
 type Chapter {
     chapternumber: Int!
     versiclesnumber: Int!
-    versicles: [Versicle!]!
-    content: String!
+    versicles: [Versicle!]!    
 }
 
 type Versicle {
-
     versiclenumber: Int!    
     content: String!
 }
