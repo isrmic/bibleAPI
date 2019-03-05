@@ -3,7 +3,7 @@ the BibleAPI project is a simple Graphql API that makes use of data collected fr
 
 # What was used?
 In this project the data collected from this project were used: [biblical-data-collector](https://github.com/isrmic/biblical-data-collector).
-And used this for the API: [scaffoldingAPI](https://github.com/isrmic/scaffoldingAPI).
+And used this for the API: [scaffoldingAPI](https://github.com/isrmic/scaffoldingAPI){:target="_blank"}.
 
 # Get Started
     1- git clone https://github.com/isrmic/bibleAPI <name-folder>
@@ -18,8 +18,9 @@ the server is acessible on: http://127.0.0.1:5000/
 Access your browser at http://127.0.0.1:5000/ to access the playgroud and do the tests you want.
 
 See this examples online:
-API: [Example API](https://biblenvtapi.herokuapp.com/)
-APP: [Example APP](http://myapplications.tk)
+API: [Example API](https://biblenvtapi.herokuapp.com/){:target="_blank"}.
+
+APP: [Example APP](http://myapplications.tk){:target="_blank"}.
 
 # how to get the data?
 ### Examples
