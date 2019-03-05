@@ -19,20 +19,20 @@ const randomversicle = () => async (root, {bookname, chapter}, { bibles }) => {
 	const randombook = Math.floor((Math.random() * (books.length)));
 	var book = books[randombook];
 
-	if (chapter) {
-		var chapter = book.chapters[chapter];
+	if (chapter && chapter > 0 && chapter <= book.chapters.length) {
+		var chapterinfo = book.chapters[chapter - 1];
 	}
 	else {
 		var randomchapter = Math.floor((Math.random() * book.chaptersnumber));
-		var chapter = book.chapters[randomchapter];
+		var chapterinfo = book.chapters[randomchapter];
 	}
 
-	const randomversicle = Math.floor((Math.random() * chapter.versiclesnumber));
-	const versiclecontent = chapter.versicles[randomversicle];
-	
+	const randomversicle = Math.floor((Math.random() * chapterinfo.versiclesnumber));
+	const versiclecontent = chapterinfo.versicles[randomversicle];
+		
 	return {
 		bookname: book.bookname,
-		chapternumber: randomchapter + 1,
+		chapternumber: chapter || (randomchapter + 1),
 		versiclenumber: randomversicle + 1,
 		content: versiclecontent,
 	};
