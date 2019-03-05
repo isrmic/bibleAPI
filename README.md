@@ -49,7 +49,7 @@ query getbooks {
 ```
 
 Filter by Name:
-````gql
+```gql
 query getbooks {
   books (bookname: "Gênesis") {
     bookname
@@ -83,6 +83,7 @@ query getbooks {
   }
 }
 ```
+
 Filter by verse:
 ```gql
 query getbooks {
@@ -100,6 +101,7 @@ query getbooks {
   }
 }
 ```
+
 Filter by content:
 ```gql
 query getbooks {
@@ -119,6 +121,7 @@ query getbooks {
 ```
 
 Get a random verse:
+
 ```gql
 query randversicle {
   randomversicle {
