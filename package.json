@@ -8,11 +8,20 @@
     "start": "node index.js",
     "generate": "node utils/generate.js"
   },
+  "keywords": [
+    "API",
+    "Graphql",
+    "biblical data"    
+  ],
   "author": "isrmic",
   "license": "MIT",
   "dependencies": {
     "apollo-server": "^2.1.0",
     "graphql": "^14.0.2",
     "graphql-tools": "^4.0.4"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/isrmic/bibleAPI"
   }
 }

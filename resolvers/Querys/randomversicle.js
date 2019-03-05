@@ -3,12 +3,9 @@ const { generateRegexString } = require('./modules/generators');
 const randomversicle = () => async (root, {bookname, chapter}, { bibles }) => {
 
 	const nvt = bibles.version.nvt;
-	let books;
-
-	if (bookname) {
-		const filter = new RegExp(generateRegexString(bookname), 'i');
-		books = nvt.books.filter(({ bookname }) => (filter.lastIndex = 0, filter.test(bookname)));
-	}
+	
+	const books = bookname ? books = nvt.books.filter(({ bookname }) => (filter.lastIndex = 0, filter.test(bookname))) : nvt.books;
+	
 	if (books.length === 0)
 		return {
 			bookname: '',
