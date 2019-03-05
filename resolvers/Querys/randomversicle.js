@@ -4,7 +4,9 @@ const randomversicle = () => async (root, {bookname, chapter}, { bibles }) => {
 
 	const nvt = bibles.version.nvt;
 	
-	const books = bookname ? books = nvt.books.filter(({ bookname }) => (filter.lastIndex = 0, filter.test(bookname))) : nvt.books;
+	const filter = bookname && new RegExp(generateRegexString(bookname), 'i');
+	
+	const books = bookname ? nvt.books.filter(({ bookname }) => (filter.lastIndex = 0, filter.test(bookname))) : nvt.books;
 	
 	if (books.length === 0)
 		return {

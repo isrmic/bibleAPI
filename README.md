@@ -19,6 +19,7 @@ Access your browser at http://127.0.0.1:5000/ to access the playgroud and do the
 
 See this examples online:
 API: [Example API](https://biblenvtapi.herokuapp.com/)
+
 APP: [Example APP](http://myapplications.tk)
 
 # how to get the data?
@@ -30,6 +31,7 @@ type Query {
     randomversicle (bookname: String, chapter: Int): RandVerse!
 }
 ```
+
 Get all books:
 ```gql
 query getbooks {
@@ -125,6 +127,7 @@ Get a random verse:
 ```gql
 query randversicle {
   randomversicle {
+    bookname
     chapternumber
     versiclenumber
     content
