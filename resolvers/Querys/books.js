@@ -56,16 +56,18 @@ const books = () => async (root, { bookname, chapter, versicle, content }, { bib
     });
   }
   if (content) {
-    
+    console.log('filtered for content')
     const filter = new RegExp(generateRegexString(content), 'i');
 
-    books.map(book => {
-      book.chapters.map(chapter => {
-        chapter.versicles = chapter.versicles.filter(versicle => {
+    books = books.filter(book => {
+      book.chapters = book.chapters.filter(chapter => {
+        chapter.versicles = chapter.versicles.filter(verse => {
           filter.lastIndex = 0;
-          return filter.test(versicle.content);
+          return filter.test(verse.content);
         });
+        return chapter.versicles.length > 0;
       });
+      return book.chapters.length > 0;
     });
   }
   return books;
